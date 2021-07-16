@@ -4,7 +4,6 @@ import services from './services'
 import cors from 'cors'
 
 Vue.use(VueResource)
-Vue.use(cors)
 
 const http = Vue.http
 http.options.root = 'http://pentagro.ddns.com.br:65129/api/user/'

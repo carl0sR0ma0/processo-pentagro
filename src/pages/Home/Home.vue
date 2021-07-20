@@ -15,3 +15,9 @@ export default {
   }
 }
 </script>
+<style>
+  .home {
+    background: rgba(124, 124, 124, 0.658);
+    height: 100vh;
+  }
+</style>

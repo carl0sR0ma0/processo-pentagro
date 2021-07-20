@@ -5,7 +5,7 @@ import * as types from './mutation-types'
 
 export const ActionDoLogin = ({ dispatch }, payload) => {
   return services.auth.login(payload).then(res => {
-    dispatch('ActionSetToken', res.body)
+    dispatch('ActionSetToken', res.body.replaceAll('"', ''))
   })
 }
 

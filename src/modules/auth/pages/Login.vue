@@ -1,6 +1,7 @@
 <template>
   <form @submit.prevent="submit()">
     <div class="login-page">
+    <img width="250" src="../../../assets/login/logo.png" alt="Logo da Pentagro">
       <div class="card">
         <div class="card-header">Login</div>
         <div class="card-body">
@@ -49,7 +50,7 @@ export default {
         this.form.Username = (btoa(JSON.stringify(this.form.Username)));
         this.form.UserPassword = (btoa(JSON.stringify(MD5(this.form.UserPassword).toString())));
         await this.ActionDoLogin(this.form)
-        this.$router.push({ name: 'User' })
+        this.$router.push({ name: 'Home' })
       } catch (err) {
         alert(err.data ? err.data.message : 'Não foi possível fazer login')
       }
@@ -60,12 +61,17 @@ export default {
 
 <style lang="scss">
   .login-page {
+    background-color: rgb(41, 40, 40);
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     .card {
       width: 30%;
     }
+  }
+  img {
+    margin-bottom: 30px;
   }
 </style>

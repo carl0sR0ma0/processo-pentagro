@@ -79,8 +79,6 @@ export default {
     async enviarForm() {
       try {
         this.form.UserPassword = (btoa(JSON.stringify(MD5(this.form.UserPassword).toString())));
-        console.log(this.form)
-
         await this.ActionSendUser(this.form)
       } catch (err) {
         alert(err.body ? err.data.message : err)

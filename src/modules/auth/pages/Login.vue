@@ -3,7 +3,7 @@
     <div class="login-page">
     <img width="250" src="../../../assets/login/logo.png" alt="Logo da Pentagro">
       <div class="card">
-        <div class="card-header">Login</div>
+        <h1 class="card-header">Login</h1>
         <div class="card-body">
           <div class="form-group">
             <input
@@ -23,9 +23,9 @@
               placeholder="Senha"
             >
           </div>
-          <button class="btn btn-primary w-100">
+          <a @click="submit" class="btn btn-primary w-100">
             Entrar
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -61,14 +61,34 @@ export default {
 
 <style lang="scss">
   .login-page {
-    background-color: rgb(41, 40, 40);
+    background: rgba(124, 124, 124, 0.658);
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    .card-header {
+      text-align: center;
+      color: #009a9b;
+      font-size: 24px;
+      font-weight: 700;
+    }
     .card {
       width: 30%;
+    }
+    input {
+      margin-top: 15px;
+      color: #009a9b;
+    }
+
+    a {
+      margin-top: 20px;
+      background-color: #009a9b;
+    }
+
+    a:hover {
+      background-color: #0c4e4e;
+      color: white
     }
   }
   img {

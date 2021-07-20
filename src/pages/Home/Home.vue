@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <a @click="nav">Cadastrar usuario</a>
+  <div class="home">
+    <a class="btn btn-primary" @click="nav">Cadastrar usuario</a>
   </div>
 </template>
 

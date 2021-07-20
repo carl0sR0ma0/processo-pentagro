@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-    <h1>Gestão de Usuários</h1>
+    <div class="logo">
+      <img class="i-logo" src="../../../assets/logo.png" alt="logo vue">
+      <h1>Gestão de Usuários</h1>
+    </div>
       <form action="post">
         <div class="form">
           <div class="col-md-4">
@@ -36,7 +39,7 @@
         </div>
 
         <div class="form-group">
-          <input @click="enviarForm()" value="Adicionar Paciente" class="btn btn-success" />
+          <input @click="enviarForm()" value="Salvar" class="btn btn-success" />
         </div>
       </form>
   </div>
@@ -97,10 +100,36 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss">
+  .home {
+    background: rgba(124, 124, 124, 0.658);
+    height: 100vh;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .i-logo {
+    width: 64px;
+    margin-top: 72px;
+  }
+
+  .logo h1 {
+    margin-top: 70px;
+    margin-left: 15px;
+  }
+
   .form {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+  }
+
+  .btn {
+    margin-top: 20px;
+    margin-left: 152px;
   }
 </style>

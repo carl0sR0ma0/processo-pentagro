@@ -74,6 +74,7 @@ export default {
       font-weight: 700;
     }
     .card {
+      background-color: rgba(124, 124, 124, 0.13);
       width: 30%;
     }
     input {
